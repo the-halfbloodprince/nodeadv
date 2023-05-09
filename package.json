@@ -2,10 +2,10 @@
   "name": "backend-template-ts-express",
   "version": "1.0.0",
   "description": "backend template with ts and express",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon index.ts"
+    "dev": "nodemon server.ts",
+    "start": "node server.ts"
   },
   "author": "the-halfbloodprince",
   "license": "ISC",
