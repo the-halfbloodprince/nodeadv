@@ -1,14 +1,11 @@
 //Import dependencies
 import express, { Application } from 'express'
-import { ApolloServer, gql } from 'apollo-server-express'
+import * as dotenv from 'dotenv'
 
 //Local dependencies
 import routeInitializer from './initialization/routes'
-import initializeDBPool from './initialization/db_old'
 import initializeGraphQL from './initialization/graphQL'
-// import { initializeDB } from './initialization/db_prisma'
-import { initializeDB } from './initialization/db_drizzle'
-import * as dotenv from 'dotenv'
+import initializeDB from './initialization/db'
 import { appConfig } from './config'
 
 dotenv.config()
@@ -29,7 +26,6 @@ async function runApp() {
 
     initializeDB(app)
     await initializeGraphQL(app)
-    // initializeDBPool()
 
     //App Listening
     app.listen(port, (): void => {

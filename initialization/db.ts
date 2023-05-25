@@ -3,7 +3,7 @@ import postgres from 'postgres'
 import { Application } from 'express'
 import { appConfig } from '../config'
 
-export function initializeDB(app: Application, connectionString?: string) {
+export default function initializeDB(app: Application, connectionString?: string) {
     
     // console.log('conn string:')
     // console.log(connectionString || appConfig.dbUrl)
