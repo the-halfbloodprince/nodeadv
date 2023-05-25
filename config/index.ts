@@ -1,6 +1,6 @@
 import { Options } from 'sequelize'
 
-const dbSettings: Options = {
+const dbSettings__sample: Options = {
     host: 'localhost',
     port: 5432,
     database: 'dev1',
@@ -8,7 +8,14 @@ const dbSettings: Options = {
     password: 'xD'
 }
 
-export const appConfig = {
-    dbSettings,
+type AppConfig = {
+    dbSettings?: Options
+    dbUrl: string
+    pool: any
+}
+
+export const appConfig: AppConfig = {
+    dbUrl: null,
+    dbSettings: null,
     pool: null
 }
