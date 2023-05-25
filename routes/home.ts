@@ -1,5 +1,5 @@
 //Import dependencies
-import express, { Request, Response } from 'express'
+import express from 'express'
 
 //Create Router
 const router = express.Router()
